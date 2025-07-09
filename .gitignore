@@ -1,5 +1,7 @@
 # Environment variables for API keys
 .env
+gcp_key.json # Ensure this exact file name is ignored if it's anywhere in the repo
+backend/gcp_key.json # Specific path if it's always in backend folder
 
 # Python specific ignores
 __pycache__/
