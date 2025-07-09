@@ -1,0 +1,230 @@
+/* Import Google Fonts - Roboto is already linked in HTML */
+
+:root {
+    /* Radiant Dark Blue Palette */
+    --background-deep: #0D1B2A; /* Very dark blue for body */
+    --background-mid: #1B263B;  /* Slightly lighter dark blue for chatbox */
+    --background-light: #2D4059; /* Another shade for container */
+
+    --accent-blue-vibrant: #4169E1; /* Royal Blue - for highlights, user messages */
+    --accent-blue-light: #6495ED; /* Cornflower Blue - for hover states */
+    --text-light: #E0E7FF;      /* Very light blue-ish white for text */
+    --text-muted: #AAB7C4;      /* Muted text for subtle elements */
+
+    --shadow-color-dark: rgba(0, 0, 0, 0.6);
+    --shadow-color-blue: rgba(65, 105, 225, 0.4); /* Blueish shadow for glow */
+}
+
+/* Background Animation */
+@keyframes background-pan {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* More complex, dynamic background */
+    background: 
+        linear-gradient(45deg, var(--background-deep) 0%, var(--background-mid) 100%),
+        radial-gradient(circle at 10% 20%, rgba(65, 105, 225, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(65, 105, 225, 0.1) 0%, transparent 50%);
+    background-size: 200% 200%; /* Make background larger than viewport */
+    background-position: 0% 0%;
+    animation: background-pan 30s linear infinite alternate; /* Subtle animation */
+    
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Important to prevent scrollbars from background animation */
+}
+
+.chat-container {
+    background: linear-gradient(135deg, var(--background-light) 0%, var(--background-mid) 100%);
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 
+        0 10px 30px var(--shadow-color-dark), /* Deeper dark shadow */
+        0 0 40px var(--shadow-color-blue); /* Radiant blue glow */
+    width: 95%; /* Even broader */
+    max-width: 1050px; /* Increased max-width for more space */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 35px; /* More internal padding */
+    position: relative;
+    z-index: 1; 
+}
+
+/* Subtle background pattern/noise for more texture (Optional, you can comment this out) */
+.chat-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M0 0h3v3H0V0zm3 3h3v3H3V3z"/%3E%3C/g%3E%3C/svg%3E');
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    padding-top: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px var(--accent-blue-vibrant);
+}
+
+#status {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.chat-box {
+    background-color: var(--background-mid);
+    border-radius: 15px;
+    padding: 20px;
+    height: 550px; /* Slightly taller for more content */
+    overflow-y: auto;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar styling for Webkit browsers (Chrome, Edge, Safari) */
+.chat-box::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: var(--background-deep);
+    border-radius: 10px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: var(--accent-blue-vibrant);
+    border-radius: 10px;
+    border: 2px solid var(--background-mid);
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue-light);
+}
+
+
+.message {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-end;
+}
+
+.message p {
+    max-width: 90%; /* Messages take up more horizontal space */
+    padding: 15px 22px;
+    border-radius: 25px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    font-size: 1.05em;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.user-message p {
+    background-color: var(--accent-blue-vibrant);
+    color: white;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.bot-message p {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.message audio {
+    width: 100%;
+    margin-top: 10px;
+    filter: invert(0.9) sepia(1) saturate(2) hue-rotate(200deg) brightness(1.1) contrast(1.1);
+    border-radius: 10px;
+}
+
+.input-area {
+    display: flex;
+    gap: 15px;
+    padding: 20px 0 0 0;
+    border-top: 1px solid var(--background-light);
+}
+
+.input-area input[type="text"] {
+    flex-grow: 1;
+    padding: 15px 25px;
+    border: 1px solid var(--background-light);
+    border-radius: 30px;
+    background-color: var(--background-mid);
+    color: var(--text-light);
+    font-size: 1.05em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-area input[type="text"]:focus {
+    border-color: var(--accent-blue-vibrant);
+    box-shadow: 0 0 15px var(--shadow-color-blue);
+}
+
+.input-area button {
+    padding: 15px 28px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, var(--accent-blue-vibrant), var(--accent-blue-light));
+    color: white;
+    font-size: 1.05em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.input-area button:hover {
+    background: linear-gradient(45deg, var(--accent-blue-light), var(--accent-blue-vibrant));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.input-area button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific button visibility */
+#recordButton {
+    /* controlled by JS */
+}
+
+#stopRecordingButton {
+    display: none; /* Controlled by JS */
+}

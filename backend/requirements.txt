@@ -1,0 +1,14 @@
+Flask==3.0.3
+python-dotenv==1.0.1
+google-cloud-speech==2.25.0
+google-cloud-texttospeech==2.18.0
+google-generativeai==0.7.1 # Needed for Phase 4
+faiss-cpu # or faiss-gpu if you have a compatible GPU
+transformers
+langchain-google-genai
+langchain-community # For integrations like FAISS, PyPDF, etc.
+pypdf # For PDF document loading
+tqdm # For progress bars (useful during RAG index creation)
+# spaCy and its English model
+spacy
+# pillow # Required by some image libraries, good to have if planning image gen

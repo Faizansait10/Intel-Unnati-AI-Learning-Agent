@@ -1,0 +1,33 @@
+# Environment variables for API keys
+.env
+
+# Python specific ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-arg.txt
+.tox/
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+.env/ # In case .env is a folder name instead of a file
+instance/ # If Flask creates an instance folder
+
+# Google Cloud specific (if any local credentials cache)
+.google/
+
+# macOS specific files
+.DS_Store
+
+# Any log files
+*.log
+
+# Frontend build/temp files (if applicable later)
+node_modules/
+dist/
+build/
