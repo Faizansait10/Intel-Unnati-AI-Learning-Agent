@@ -14,17 +14,6 @@ Welcome to the **Multimodal AI Text and Voice Agent** – a cutting-edge convers
 
 Developed as a demonstration of robust multi-modal AI integration, this project is built with a Flask backend, a responsive frontend, and leverages powerful Google Cloud APIs for speech recognition (STT) and text-to-speech (TTS).
 
----
-
-## 🚀 Witness the Magic (Demo)
-
-![Screenshot 1: Chat Interface](https://via.placeholder.com/600x300?text=Screenshot+of+Chat+Interface)
-*Caption: The sleek, radiant dark theme for an immersive experience.*
-
-![Screenshot 2: Voice Input in Action](https://via.placeholder.com/600x300?text=Screenshot+of+Voice+Input)
-*Caption: Seamless voice input and real-time status updates.*
-
----
 
 ## 🌟 Key Features
 
