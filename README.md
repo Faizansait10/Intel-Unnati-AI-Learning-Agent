@@ -10,7 +10,7 @@
 
 ## ✨ Project Overview
 
-Welcome to the **Gemini AI Voice Agent** – a cutting-edge conversational AI designed to interact with you seamlessly through both **voice and text**. Forget clunky interfaces; this agent listens to your spoken words, understands your queries, provides intelligent responses, and even speaks back to you, creating a truly intuitive and dynamic user experience. It's like having your own personal, intelligent assistant, powered by Google's state-of-the-art Gemini AI model.
+Welcome to the **Multimodal AI Text and Voice Agent** – a cutting-edge conversational AI designed to interact with you seamlessly through both **voice and text**. Forget clunky interfaces; this agent listens to your spoken words, understands your queries, provides intelligent responses, and even speaks back to you, creating a truly intuitive and dynamic user experience. It's like having your own personal, intelligent assistant, powered by Google's state-of-the-art Gemini AI model.
 
 Developed as a demonstration of robust multi-modal AI integration, this project is built with a Flask backend, a responsive frontend, and leverages powerful Google Cloud APIs for speech recognition (STT) and text-to-speech (TTS).
 
