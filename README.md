@@ -18,11 +18,6 @@ Developed as a demonstration of robust multi-modal AI integration, this project 
 
 ## 🚀 Witness the Magic (Demo)
 
-*(Self-Correction: Replace the image placeholders with actual GIFs/Screenshots as soon as you have them! A visual demo is absolutely key for an "amazing" README.)*
-
-**[CLICK HERE FOR A LIVE DEMO (e.g., YouTube Video / GIF Demo)]**
-*(Once you have a GIF or a short video, link it here! You can use tools like Peek, LICEcap, or online GIF makers.)*
-
 ![Screenshot 1: Chat Interface](https://via.placeholder.com/600x300?text=Screenshot+of+Chat+Interface)
 *Caption: The sleek, radiant dark theme for an immersive experience.*
 
@@ -179,13 +174,6 @@ A huge thank you to:
 * **Google Gemini** for providing the powerful generative AI model.
 * **Google Cloud Platform** for the robust Speech-to-Text and Text-to-Speech services.
 * **Flask** for making web development a breeze.
-* **You (the creator!)** for the vision and effort in building this amazing agent.
+* **I extend my sincere gratitude to everyone who supported us throughout the development of the Voice-Enabled Conversational AI Agent. A special thank you to **Bindu Sharma** her invaluable contributions and collaborative spirit throughout this project. Her hard work and insights were instrumental in bringing this AI agent to fruition.**
+* **This project would not have achieved its current form without the extraordinary guidance of our mentor, Dr. Vani V. Her expertise, patience, and consistent feedback have not only helped us navigate complex challenges but have also significantly enriched our learning experience, making us better developers and researchers at every turn. We are immensely grateful for her profound impact**
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-*(Self-correction: If you haven't created a `LICENSE` file yet, you should! You can add one directly on GitHub after pushing, or create a `LICENSE` file in your root directory with the MIT license text.)*
-
----
